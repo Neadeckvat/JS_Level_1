@@ -2,7 +2,7 @@
 
 /**
  * Функция находит окончания для слова 'рубль'
- * @param {number}
+ * @param {number} num_money
  * @returns {string}
  */
 function findDeclension(num_money) {
