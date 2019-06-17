@@ -1,0 +1,74 @@
+// out: ../css/style.css
+
+@import url(fonts.less);
+
+.text_style(@font, @color, @font-size, @font-weight) {
+    font-family: @font;
+    color: @color;
+    font-size: @font-size;
+    font-weight: @font-weight;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    padding: 80px 375px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .product {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 30px;
+        margin-top: 26px;
+        outline: 1px solid #f8f8f8;
+        width: 370px;
+        .product_title {
+            .text_style('raleway-regular', #555555, 20px, 500);
+            margin: 28px 0 0 30px;
+        }
+        .product_text {
+            width: 300px;
+            height: 200px;
+            .text_style('montserrat-regular', #8c8c8c, 14px, 300);
+            line-height: 22px;
+            margin: 20px 0 0 30px;
+            display: none;
+        }
+        .product_btn {
+            .text_style('montserrat-regular', #c7b299, 14px, 300);
+            border: 1px solid #c7b299;
+            border-radius: 20px;
+            outline: none;
+            background-color: inherit;
+            padding: 10px;
+            margin: 20px 0 0 30px;
+            display: flex;
+            align-items: flex-end;
+            line-height: 10px;
+        }
+        .product_btn:hover {
+            border-color: #ffffff;
+            color: #ffffff;
+        }
+        .product_btn:active {
+            border-color: #c7b299;
+            color: #c7b299;
+        }
+    }
+    .product:hover {
+        background-color: #362f2d;
+        .product_title {
+            color: #c7b299;
+        }
+        .product_text {
+            color: #ffffff;
+        }
+    }
+}
