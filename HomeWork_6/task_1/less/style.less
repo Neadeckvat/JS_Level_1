@@ -1,0 +1,56 @@
+// out: ../css/style.css
+
+html {
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+.carousel {
+    width: 100%;
+    position: relative;
+    .carousel_img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+    }
+    .display_img_now {
+        z-index: 0;
+    }
+    .display_img_next {
+        z-index: -1;
+    }
+    .carousel_btn {
+        outline: none;
+        border: none;
+        background-color: inherit;
+        position: absolute;
+        top: 250px;
+        .carousel_btn_svg {
+            fill: red;
+        }
+    }
+    .btn_right {
+        left: 1100px;
+    }
+    .btn_left {
+        left: 140px;
+    }
+    .carousel_btn:hover .carousel_btn_svg {
+        fill: white;
+    }
+    .carousel_btn:active .carousel_btn_svg {
+        fill: red;
+    }
+}
